@@ -41,9 +41,8 @@
         android:id="@+id/txtnumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Valor"
+        android:layout_above="@+id/sum"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="84dp"
         android:ems="10"
         android:inputType="number" />
 
@@ -80,4 +79,12 @@
         android:layout_alignBottom="@+id/inserir"
         android:layout_toStartOf="@+id/inserir"
         android:background="@android:drawable/ic_menu_upload_you_tube" />
+
+    <Button
+        android:id="@+id/push"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/send"
+        android:layout_toStartOf="@+id/sum"
+        android:background="@android:drawable/ic_input_get" />
 </RelativeLayout>

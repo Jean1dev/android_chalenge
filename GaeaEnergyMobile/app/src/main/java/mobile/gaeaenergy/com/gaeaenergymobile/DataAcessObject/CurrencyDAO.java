@@ -97,6 +97,17 @@ public class CurrencyDAO extends AbstractDAO {
         return retorno;
     }
 
+    public long DeleteALL(){
+        Open();
+        long retorno;
+        String sql = "DELETE * FROM " + CurrencyModel.TABELA_NOME;
+
+        retorno = db.delete(CurrencyModel.TABELA_NOME, null, null);
+
+        Close();
+        return retorno;
+    }
+
     public int Select() throws SQLException {
         int retorno = 0;
         Open();

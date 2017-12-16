@@ -10,6 +10,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
+
 import java.sql.SQLException;
 
 import mobile.gaeaenergy.com.gaeaenergymobile.DataAcessObject.CurrencyDAO;
@@ -24,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private Button insert;
     private Button delete;
     private Button send;
+    private Button push;
     private EditText number;
     private TextView texto;
     private CurrencyDAO mydb;
@@ -43,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         insert  = (Button) findViewById(R.id.inserir);
         delete  = (Button) findViewById(R.id.delete);
         send    = (Button) findViewById(R.id.send);
+        push    = (Button) findViewById(R.id.push);
         number  = (EditText) findViewById(R.id.txtnumber);
         texto   = (TextView) findViewById(R.id.Valor);
 
@@ -97,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(mydb.Delete(CURRENCY_ID) > 1){
+                if(mydb.DeleteALL() > 1){
                     Toast.makeText(MainActivity.this, "SUCESSO", Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(MainActivity.this, "PROBLEMAS", Toast.LENGTH_SHORT).show();
@@ -110,6 +116,26 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Helper p = new Helper();
                 p.send(CURRENCY_VALUE, getBaseContext());
+            }
+        });
+
+        push.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = "http://neuraapi-net.umbler.net/methods/get_valor.php";
+                Ion.with(getBaseContext())
+                        .load(url)
+                        .asJsonObject()
+                        .setCallback(new FutureCallback<JsonObject>() {
+                            @Override
+                            public void onCompleted(Exception e, JsonObject result) {
+                                double aux = result.get("RETORNO").getAsDouble();
+                                System.out.println(aux);
+                                mydb.Insert(aux, 0);
+                                CURRENCY_VALUE = aux;
+                                refreshValue();
+                            }
+                        });
             }
         });
 
