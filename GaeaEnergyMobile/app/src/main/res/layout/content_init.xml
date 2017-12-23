@@ -61,4 +61,15 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="351dp" />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:backgroundTint="@android:color/background_light"
+        app:rippleColor="@android:color/background_light"
+        app:srcCompat="@mipmap/ic_launcher"
+        tools:layout_editor_absoluteX="342dp"
+        tools:layout_editor_absoluteY="520dp" />
+
 </android.support.constraint.ConstraintLayout>
