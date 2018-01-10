@@ -29,6 +29,14 @@ public class InitActivity extends AppCompatActivity {
                 startActivity(it);
             }
         });
+
+        FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.flbtn_diet);
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                 startActivity(new Intent(getBaseContext(), DietActivity.class));
+            }
+        });
     }
 
     @Override

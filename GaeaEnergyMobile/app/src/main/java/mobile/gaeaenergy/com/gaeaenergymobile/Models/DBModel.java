@@ -19,6 +19,7 @@ public class DBModel extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(CurrencyModel.CREATE_TABLE);
+        sqLiteDatabase.execSQL(DietaModel.CREATE_TABLE);
     }
 
     @Override
