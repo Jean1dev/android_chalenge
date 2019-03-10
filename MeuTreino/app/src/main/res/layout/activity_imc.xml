@@ -36,8 +36,9 @@
             android:background="#FFF"
             android:fontFamily="casual"
             android:gravity="start"
+            android:inputType="number"
             android:hint="Peso"
-            android:inputType="textPersonName" />
+            />
 
         <TextView
             android:layout_width="match_parent"
@@ -64,7 +65,7 @@
             android:fontFamily="casual"
             android:gravity="start"
             android:hint="Altura"
-            android:inputType="textPersonName" />
+            android:inputType="number" />
 
         <TextView
             android:layout_width="match_parent"
@@ -104,6 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+
             android:inputType="textPersonName"
             android:layout_marginRight="25dp"
             android:layout_marginLeft="10dp"
@@ -134,6 +136,7 @@
         android:text="Limpar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
 
 
 </LinearLayout>

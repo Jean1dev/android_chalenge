@@ -1,5 +1,7 @@
 package com.example.jeanfernandes.meutreino.models;
 
+import android.content.Intent;
+
 public class IMC extends BaseModel {
 
     private Double altura;
@@ -29,8 +31,8 @@ public class IMC extends BaseModel {
     }
 
     public String resolver() {
-        int op = this.imc.intValue();
         this.calcular();
+        int op = this.tratarRetorno(this.imc);
 
         if(op > 30){
             return "Obeso";
@@ -40,6 +42,16 @@ public class IMC extends BaseModel {
             return "normal";
         }
         return "Baixo peso";
+    }
+
+    private int tratarRetorno(Double op){
+        int ret = 0;
+        String aux =  String.valueOf(op);
+        aux = aux.replace("0", "");
+        aux = aux.replace(".", "");
+        aux = aux.substring(0, 2);
+        ret = Integer.parseInt(aux);
+        return ret;
     }
 
     private void calcular(){

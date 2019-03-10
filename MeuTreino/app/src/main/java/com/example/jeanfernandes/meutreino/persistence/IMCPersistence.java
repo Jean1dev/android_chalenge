@@ -18,6 +18,7 @@ public class IMCPersistence extends DBO {
 
     public IMCPersistence(Context __context) {
         this.__context = __context;
+        this.__db = new DBOpenHelper(__context);
     }
 
     public long insert(final Double imc){
