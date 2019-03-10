@@ -1,5 +1,6 @@
 package com.example.jeanfernandes.meutreino;
 
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -108,8 +109,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_treino) {
-            // Handle the camera action
+        if (id == R.id.nav_imc) {
+            Intent i = new Intent(getBaseContext(), IMCActivity.class);
+            startActivity(i);
         } else if (id == R.id.nav_treino) {
 
         } else if (id == R.id.nav_calendar) {

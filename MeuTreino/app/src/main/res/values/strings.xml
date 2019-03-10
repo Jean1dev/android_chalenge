@@ -8,9 +8,9 @@
     <string name="action_settings">Settings</string>
 
 
-
     <string name="menu_opt_1">Treinos</string>
     <string name="menu_opt_2">Agenda</string>
     <string name="menu_opt_3">Relatorios</string>
     <string name="menu_opt_4">Historico</string>
+    <string name="menu_opt_5">IMC</string>
 </resources>

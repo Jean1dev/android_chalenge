@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7dfdf"
+    android:orientation="vertical"
+    tools:context=".IMCActivity">
+
+
+    <TextView
+        android:id="@+id/imc_title"
+        android:background="#7bb2dc"
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:fontFamily="sans-serif"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFF"
+        android:text="Indice de massa corporea" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/txt_peso"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="35dp"
+            android:background="#FFF"
+            android:fontFamily="casual"
+            android:gravity="start"
+            android:hint="Peso"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:fontFamily="sans-serif"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFF"
+            android:layout_marginTop="35dp"
+            android:text="KG" />
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/txt_altura"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="35dp"
+            android:background="#FFF"
+            android:fontFamily="casual"
+            android:gravity="start"
+            android:hint="Altura"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:fontFamily="sans-serif"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFF"
+            android:layout_marginTop="35dp"
+            android:text="Altura" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/imc_btn_calcular"
+        android:layout_marginTop="15dp"
+        android:text="Calcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="___________________________________________________"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:gravity="center"
+        android:text="Resultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/imc_peso_ideal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="10dp"
+            android:text="Peso Ideal" />
+
+        <EditText
+            android:id="@+id/imc_imc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="IMC" />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/imc_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="   Interpretacao" />
+
+    <Button
+        android:id="@+id/imc_btn_limpar"
+        android:layout_marginTop="15dp"
+        android:text="Limpar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
