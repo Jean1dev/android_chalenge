@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FolhaActivity">
+
+    <EditText
+        android:id="@+id/folha_nome"
+        android:layout_height="wrap_content"
+        android:hint="nome"
+        android:inputType="textPersonName"
+        android:layout_width="fill_parent">
+    </EditText>
+
+    <EditText
+        android:id="@+id/folha_salario"
+        android:layout_height="wrap_content"
+        android:hint="salario"
+        android:inputType="numberDecimal"
+        android:layout_width="fill_parent">
+    </EditText>
+
+    <EditText
+        android:id="@+id/folha_aumento"
+        android:layout_height="wrap_content"
+        android:hint="aumento"
+        android:inputType="number"
+        android:layout_width="fill_parent">
+    </EditText>
+
+    <EditText
+        android:id="@+id/folha_novoSaldo"
+        android:layout_height="wrap_content"
+        android:hint="NovoSaldo"
+        android:inputType="number"
+        android:layout_width="fill_parent">
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_calc_folha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular" />
+
+</LinearLayout>

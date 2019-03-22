@@ -13,4 +13,6 @@
     <string name="menu_opt_3">Relatorios</string>
     <string name="menu_opt_4">Historico</string>
     <string name="menu_opt_5">IMC</string>
+    <string name="menu_opt_6">Folha</string>
+    <string name="title_activity_folha">FolhaActivity</string>
 </resources>

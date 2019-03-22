@@ -112,7 +112,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.nav_imc) {
             Intent i = new Intent(getBaseContext(), IMCActivity.class);
             startActivity(i);
-        } else if (id == R.id.nav_treino) {
+        } else if (id == R.id.nav_folha) {
+            Intent i = new Intent(getBaseContext(), FolhaActivity.class);
+            startActivity(i);
 
         } else if (id == R.id.nav_calendar) {
 

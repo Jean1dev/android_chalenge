@@ -19,7 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".IMCActivity"></activity>
+        <activity android:name=".IMCActivity" />
+        <activity
+            android:name=".FolhaActivity"
+            android:label="@string/title_activity_folha"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

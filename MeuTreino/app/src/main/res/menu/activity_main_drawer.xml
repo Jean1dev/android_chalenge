@@ -25,6 +25,11 @@
             android:id="@+id/nav_imc"
             android:icon="@drawable/icon_peso"
             android:title="@string/menu_opt_5" />
+
+        <item
+            android:id="@+id/nav_folha"
+            android:icon="@drawable/icon_folha"
+            android:title="@string/menu_opt_6" />
     </group>
 
     <item android:title="Communicate">
