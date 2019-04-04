@@ -15,4 +15,7 @@
     <string name="menu_opt_5">IMC</string>
     <string name="menu_opt_6">Folha</string>
     <string name="title_activity_folha">FolhaActivity</string>
+    <string name="btnReserva">reserva</string>
+    <string name="btnLimpar">limpar</string>
+    <string name="btnSalvar">salvar</string>
 </resources>
